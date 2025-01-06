@@ -1,97 +1,47 @@
-# WhatATheme
-markdown: kramdown
-
-# URL of the Site
-url: 'https://dstathopoulou.github.io/REPO1'
-# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: 
-
-# Title of the Site
-title: D Project Page
-# Description of the Site
-description: Welcome to the place where you can see my projects
-# URL of Image of the Site
-site-image: /WhatATheme/assets/images/meta.jpg
-# Keywords of the Site
-site-keywords: Site, Template, Theme
-# URL for the Image of custom Favicon
-favicon-url: 
-
-# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-
-# Social Media and Contact
-# If you don't want to use any icon, you can leave them blank.
-email: despoina.stathopouloulou12@gmail.com
-#facebook_username: thedevslot
-#twitter_username: thedevslot
-#instagram_username: thedevslot
-linkedin_username: despoina.stathopouloulou12@gmail.com
-github_username:  dstathopoulou
-#youtube_channel_id: UCk_93NXYP-U_AOB5GfWlOow
-#reddit_username: /
-#behance_username: /
-#dribbble_username: /
-#spotify_username: /
-
-# Google Analytics
-google-analytics: UA-163806439-1
-
-# Disqus
-disqus-shortname: dstathopoulou
-
-# Name of the Author
-author-name: dstathopoulou
-# URL for the Image of the Author
-author-image: https://avatars.githubusercontent.com/u/190412406?s=400&v=4
-# 60 Words About the Author
-author-about: Experienced economics graduate with a background in alarm system technology. Skilled in analyzing economic data and ensuring the functionality of alarm systems. Currently exploring new opportunities and interested in leveraging analytical skills and technical expertise in various fields. Eager to contribute to innovative projects and continue learning and growing professionally.
-# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://dstathopoulou.github.io/REPO1/
-
-# SASS
-sass:
-  sass_dir: _sass
-  style: compressed
+# Site settings
+title: Henry Jekyll
 
 # Build settings
-plugins:
-  - jekyll-admin
-  - jekyll-feed
+markdown: kramdown
+permalink: pretty
 
-# Permalink
-permalink: "blog/:title"
+favicon: "/assets/img/temp_chem.jpg"
 
-# Compress
-compress_html:
-  clippings: all
+port: 3000
+url: https://dstathopoulou.github.io/REPO1
 
-# Defaults
-defaults:
-  -
-    scope:
-      type: 'posts'
-    values:
-      layout: post
-      post-image: ""
-      description: ""
-      tags:
-        - ""
-  -
-    scope:
-      type: 'pages'
-    values:
-      layout: page
+sass:
+  sass_dir: assets/css
+  style: :nested
 
-# Exclude
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+# Add bibliography
+gems: ['jekyll/scholar']
+
+scholar:
+  style: assets/bib/_ieee-with-url.csl
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  group_by: none
+  group_order: ascending
+
+  source: assets/bib
+  bibliography: _mybib.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+  bibtex_filters:
+  - superscript
+  - latex
+  - HTML
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
